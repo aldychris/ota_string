@@ -76,10 +76,14 @@ class OtaAppLocalize extends AppLocalize {
 }
 
 extension OtaAppLocalizeExtension on String {
-  String replaceOtaStringWith(List<String> listString) {
+  String replaceOtaStringWith(List<String> listString,
+      {bool skipIfParamNotMatch = false}) {
     final regex = RegExp(r'{[^{}]+(})');
     final match = regex.allMatches(this).toList();
     if (match.length != listString.length) {
+      if (skipIfParamNotMatch) {
+        return this;
+      }
       throw ('Arguments(${match.length}) and params(${listString.length}) not match');
     }
     var i = -1;

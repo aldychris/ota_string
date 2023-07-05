@@ -12,3 +12,8 @@
 
 ## 0.0.4
 - upgrade flutter version and update packages (working with anlyzer 5.x.x)
+
+
+## 0.0.5
+- Update build_runner 2.3.2
+- Add new optional param skipIfParamNotMatch. 
