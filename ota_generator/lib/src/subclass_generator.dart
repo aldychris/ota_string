@@ -141,10 +141,14 @@ class SubClassGenerator extends GeneratorForAnnotation<OtaStringClass> {
   void _writeExtension(StringBuffer classBuffer, String className) {
     classBuffer.writeln('extension ${className}Extension on String {');
     classBuffer
-        .writeln('String replaceOtaStringWith(List<String> listString) {');
+        .writeln('String replaceOtaStringWith(List<String> listString, ');
+    classBuffer.writeln(' {bool skipIfParamNotMatch = false}) {');
     classBuffer.writeln("final regex = RegExp(r'{[^{}]+(})');");
     classBuffer.writeln('final match = regex.allMatches(this).toList();');
     classBuffer.writeln('if(match.length != listString.length) {');
+    classBuffer.writeln('if (skipIfParamNotMatch) {');
+    classBuffer.writeln('return this;');
+    classBuffer.writeln('}');
     classBuffer.writeln(
         "throw('Arguments(\${match.length}) and params(\${listString.length}) not match');");
     classBuffer.writeln('}');

@@ -1,6 +1,6 @@
 name: ota_string
 description: Update string over the air
-version: 0.0.4
+version: 0.0.5
 homepage: https://github.com/aldychris/ota_string/tree/master/ota_string
 repository: https://github.com/aldychris/ota_string/tree/master/ota_string
 
