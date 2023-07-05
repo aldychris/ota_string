@@ -15,5 +15,4 @@
 
 
 ## 0.0.5
-- Update build_runner 2.3.2
 - Add new optional param skipIfParamNotMatch. 
