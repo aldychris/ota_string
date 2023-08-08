@@ -7,7 +7,8 @@ class NetworkClient {
 
   NetworkClient._internal();
 
-  Future<Response<Map<String, dynamic>>> getStringTranslation(String uri) async {
+  Future<Response<Map<String, dynamic>>> getStringTranslation(
+      String uri) async {
     return Dio().get<Map<String, dynamic>>(uri);
   }
 }

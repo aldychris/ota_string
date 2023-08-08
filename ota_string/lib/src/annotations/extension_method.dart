@@ -7,9 +7,8 @@ class OtaStringClass {
   ///Language Key order need to in order with your json response of your translation
   final List<String> languageKey;
 
-  const OtaStringClass({
-    required this.translationServer,
-    this.translationServerStg,
-    required this.languageKey
-  });
+  const OtaStringClass(
+      {required this.translationServer,
+      this.translationServerStg,
+      required this.languageKey});
 }

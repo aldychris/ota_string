@@ -12,3 +12,7 @@
 
 ## 0.0.4
 - upgrade flutter version and update packages (working with anlyzer 5.x.x)
+- 
+## 0.0.5
+- Upgrade Minimum flutter version to 3.10.0 
+- Upgrade dio version and update other dependencies 

@@ -11,7 +11,6 @@ abstract class OtaLocalStorage {
 }
 
 class HiveLocalStorage implements OtaLocalStorage {
-
   late Box<dynamic> _boxUpdate;
   late Box<dynamic> _boxOpen;
 
@@ -47,5 +46,4 @@ class HiveLocalStorage implements OtaLocalStorage {
   void putData(Map<String, dynamic> entries) async {
     _boxUpdate.putAll(entries);
   }
-
 }
