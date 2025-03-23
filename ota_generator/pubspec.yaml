@@ -1,7 +1,7 @@
 name: ota_generator
 description: Source code generator to help create multi-language string translation with update over the air without any charges.
 repository: https://github.com/aldychris/ota_string/tree/master/ota_generator
-version: 0.0.5
+version: 0.0.6
 
 environment:
   sdk: ">=3.0.0 <4.0.0"
