@@ -69,6 +69,10 @@ class OtaAppLocalize extends AppLocalize {
     }
   }
 
+  String getStringByKey(String key) {
+    return OtaStorage.getString(key, defValue: '');
+  }
+
   String get hello => OtaStorage.getString('hello', defValue: _hello);
 
   String get name_location =>

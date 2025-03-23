@@ -2,6 +2,7 @@ import 'package:analyzer/dart/element/element.dart';
 import 'package:build/build.dart';
 import 'package:ota_string/ota_string.dart';
 import 'package:source_gen/source_gen.dart';
+
 import 'model_visitor.dart';
 
 class SubClassGenerator extends GeneratorForAnnotation<OtaStringClass> {
@@ -34,6 +35,7 @@ class SubClassGenerator extends GeneratorForAnnotation<OtaStringClass> {
     _loadString(classBuffer, className, listOfLangKey, listOfBoxKey);
     _updateData(classBuffer, className, visitor, translationServer,
         translationServerStg, listOfBoxKey);
+    _generateGetByKey(classBuffer, className, visitor);
     _generateGetters(visitor, classBuffer);
 
     // end the Subclass
@@ -43,6 +45,13 @@ class SubClassGenerator extends GeneratorForAnnotation<OtaStringClass> {
 
     // return '/*' + classBuffer.toString() + '*/';
     return classBuffer.toString();
+  }
+
+  void _generateGetByKey(
+      StringBuffer classBuffer, String className, ModelVisitor visitor) {
+    classBuffer.writeln('String getStringByKey(String key) {');
+    classBuffer.writeln("return OtaStorage.getString(key, defValue: '');");
+    classBuffer.writeln('}');
   }
 
   void _loadString(StringBuffer classBuffer, String className,

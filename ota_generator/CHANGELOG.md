@@ -16,3 +16,7 @@
 ## 0.0.5
 - Add new optional param skipIfParamNotMatch. 
 - Upgrade Minimum flutter version to 3.10.0 
+
+## 0.0.6
+- Update the source_gen to allow version ">=1.4.0 <2.0.0"
+- Add support to find the String by key
