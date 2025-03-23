@@ -74,8 +74,5 @@ build/
 !**/ios/**/default.pbxuser
 !**/ios/**/default.perspectivev3
 .vscode/launch.json
-*.lock
-/ota_generator/example/macos/Flutter/GeneratedPluginRegistrant.swift
-/ota_string/pubspec.lock
 /ota_generator/example/.fvm/flutter_sdk
 /ota_generator/example/.fvm/fvm_config.json
