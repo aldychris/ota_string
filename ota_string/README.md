@@ -7,7 +7,7 @@ Update String Over the air but free...
 Add this to your pubspec.yaml file:
 ```
 dependencies:
-  ota_string: ^0.0.6
+  ota_string: ^0.0.7
   
 dev_dependencies:
   ota_generator: ^0.0.7

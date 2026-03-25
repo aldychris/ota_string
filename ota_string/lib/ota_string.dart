@@ -1,4 +1,4 @@
-library ota_string;
+library;
 
 import 'src/storage/local_storage.dart';
 

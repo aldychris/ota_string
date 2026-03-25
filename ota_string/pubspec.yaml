@@ -1,12 +1,12 @@
 name: ota_string
 description: Update string over the air
-version: 0.0.6
+version: 0.0.7
 homepage: https://github.com/aldychris/ota_string/tree/master/ota_string
 repository: https://github.com/aldychris/ota_string/tree/master/ota_string
 
 environment:
   sdk: ">=3.10.0 <4.0.0"
-  flutter: ">=3.41.2"
+  flutter: ">=3.38.0"
 
 dependencies:
   dio: ^5.3.2
