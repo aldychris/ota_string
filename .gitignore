@@ -29,6 +29,7 @@
 .pub-cache/
 .pub/
 build/
+/ota_generator/pubspec_overrides.yaml
 
 # Android related
 **/android/**/gradle-wrapper.jar
