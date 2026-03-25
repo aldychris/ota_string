@@ -9,8 +9,10 @@ part of 'app_localize.dart';
 class OtaAppLocalize extends AppLocalize {
   static OtaAppLocalize? _current;
   static OtaAppLocalize get current {
-    assert(_current != null,
-        'No instance of AppLocalize was loaded. Try to initialize the AppLocalize delegate before accessing AppLocalize.current.');
+    assert(
+      _current != null,
+      'No instance of AppLocalize was loaded. Try to initialize the AppLocalize delegate before accessing AppLocalize.current.',
+    );
     return _current!;
   }
 
@@ -46,8 +48,10 @@ class OtaAppLocalize extends AppLocalize {
     try {
       var transServer =
           'https://aldychris.github.io/JsonMocks/OtaJson/BasicSampleProduction.json';
-      const isProd =
-          bool.fromEnvironment('otaStringProdEnv', defaultValue: false);
+      const isProd = bool.fromEnvironment(
+        'otaStringProdEnv',
+        defaultValue: false,
+      );
       if (!isProd &&
           'https://aldychris.github.io/JsonMocks/OtaJson/BasicSample.json'
               .isNotEmpty) {
@@ -80,8 +84,10 @@ class OtaAppLocalize extends AppLocalize {
 }
 
 extension OtaAppLocalizeExtension on String {
-  String replaceOtaStringWith(List<String> listString,
-      {bool skipIfParamNotMatch = false}) {
+  String replaceOtaStringWith(
+    List<String> listString, {
+    bool skipIfParamNotMatch = false,
+  }) {
     final regex = RegExp(r'{[^{}]+(})');
     final match = regex.allMatches(this).toList();
     if (match.length != listString.length) {
