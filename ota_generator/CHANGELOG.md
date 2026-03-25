@@ -1,5 +1,5 @@
 ## 0.0.7
-- Upgrade Minimum Dart version to 3.10.0 and flutter version to 3.41.2
+- Upgrade Minimum Dart version to 3.10.0 and flutter version to 3.38.0
 - Add support to find the String by key
 
 ## 0.0.6
